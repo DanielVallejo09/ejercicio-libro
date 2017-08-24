@@ -4,6 +4,7 @@ public class Libro
     private String Titulo;
     private String Autor;
     private int Paginas;
+    private String numeroDeReferencia;
 
 public Libro(String TituloIni, String AutorIni, int PaginasIni)
 {
@@ -44,5 +45,13 @@ public String RegresaDetalles()
     CadRes = CadRes + Titulo;
     
     return CadRes;
+}
+
+public String NumeroDeReferencia()
+{
+    String num;
+    
+    num = numeroDeReferencia;
+    return num;
 }
 }
