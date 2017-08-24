@@ -10,4 +10,15 @@ public Libro(String TituloIni, String AutorIni)
     Autor = AutorIni;
 }
 
+
+public String DimeAutor()
+{
+    System.out.print ("Dame el Autor del libro");
+    return Autor;
+}
+
+public String DimeTitulo()
+{
+    return Titulo;
+}
 }
