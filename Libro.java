@@ -4,19 +4,25 @@ public class Libro
     private String Titulo;
     private String Autor;
     private int Paginas;
-    private String numeroDeReferencia;
+    private String NumeroDeReferencia;
 
 public Libro(String TituloIni, String AutorIni, int PaginasIni)
 {
     Titulo = TituloIni;
     Autor = AutorIni;
     Paginas = PaginasIni;
+    NumeroDeReferencia = " ";
+    
 }
 
+public String NoRef(String NumIni)
+{
+    NumeroDeReferencia = NumIni;
+    return NumeroDeReferencia;
+}
 
 public String DimeAutor()
 {
-    System.out.print ("Dame el Autor del libro");
     return Autor;
 }
 
@@ -44,14 +50,43 @@ public String RegresaDetalles()
     CadRes = CadRes + ":";
     CadRes = CadRes + Titulo;
     
+    
+    
+    if(NumeroDeReferencia != " ")
+     {
+        CadRes = CadRes + "No. De Referencia";
+        CadRes = CadRes + ":";
+        CadRes = CadRes + NumeroDeReferencia;
+      }
+      else
+      {
+         CadRes = CadRes + "No. De Referencia";
+        CadRes = CadRes + ":";
+        CadRes = CadRes + "ZZZ"; 
+        }
+     
+   
+   
     return CadRes;
 }
 
-public String NumeroDeReferencia()
+public String numeroDeReferencia()
 {
-    String num;
     
-    num = numeroDeReferencia;
-    return num;
+    String CadResultante = " ";
+    CadResultante = CadResultante + NumeroDeReferencia;
+    
+    return CadResultante;
+    
+}
+
+public void cambiaNumero(String numRef)
+{
+    int var = numRef.length(); //Contamos la longitud de cadena y la almacenamos
+    
+    if(var >= 0) 
+    {
+       NumeroDeReferencia = numRef; //se hace el cambio
+    }
 }
 }
