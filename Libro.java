@@ -5,6 +5,7 @@ public class Libro
     private String Autor;
     private int Paginas;
     private String NumeroDeReferencia;
+    private int prestamos = 0;
 
 public Libro(String TituloIni, String AutorIni, int PaginasIni)
 {
@@ -49,7 +50,9 @@ public String RegresaDetalles()
     CadRes = CadRes + "Nombre del Libro";
     CadRes = CadRes + ":";
     CadRes = CadRes + Titulo;
-    
+    CadRes = CadRes + "Prestamos";
+    CadRes = CadRes + ":";
+    CadRes = CadRes + prestamos;
     
     
     if(NumeroDeReferencia != " ")
@@ -88,5 +91,15 @@ public void cambiaNumero(String numRef)
     {
        NumeroDeReferencia = numRef; //se hace el cambio
     }
+}
+
+public void prestar()
+{
+    prestamos = prestamos + 1;
+}
+
+public int dimePrestamos()
+{
+    return prestamos;
 }
 }
