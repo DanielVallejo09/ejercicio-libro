@@ -7,6 +7,13 @@ public class Libro
     private String NumeroDeReferencia;
     private int prestamos = 0;
 
+/**
+ * construimos un objeto nuevo dandole informacion
+ * @Titulo = titulo del libro
+ * @Autor = autor del libro
+ * @Paginas = numero de paginas del libro
+ * 
+ */
 public Libro(String TituloIni, String AutorIni, int PaginasIni)
 {
     Titulo = TituloIni;
@@ -16,27 +23,42 @@ public Libro(String TituloIni, String AutorIni, int PaginasIni)
     
 }
 
-public String NoRef(String NumIni)
+/**
+ * Metodo para otorgar el numero de referencia y retornarlo
+ */public String NoRef(String NumIni)
 {
     NumeroDeReferencia = NumIni;
     return NumeroDeReferencia;
 }
 
+/**
+ * Metodo para regresar el nombre del autor
+ */
 public String DimeAutor()
 {
     return Autor;
 }
 
+/**
+ * Metodo para regresar el titulo del libro
+ */
 public String DimeTitulo()
 {
     return Titulo;
 }
 
+/**
+ * Metodo para regresar el numero de paginas
+ */
 public int DimePaginas()
 {
     return Paginas;
 }
 
+/**
+ * Metodo para regresar los detalles en conjunto del libro
+ * tiene condicionales del numero de referencia necesario
+ */
 public String RegresaDetalles()
 {
     String CadRes = " ";
@@ -73,6 +95,9 @@ public String RegresaDetalles()
     return CadRes;
 }
 
+/**
+ * Metodo para regresar el numero de referencia con la cadena
+ */
 public String numeroDeReferencia()
 {
     
@@ -83,6 +108,9 @@ public String numeroDeReferencia()
     
 }
 
+/**
+ * Metodo para cambiar el numero de referencia e intercambiarlo
+ */
 public void cambiaNumero(String numRef)
 {
     int var = numRef.length(); //Contamos la longitud de cadena y la almacenamos
@@ -93,11 +121,17 @@ public void cambiaNumero(String numRef)
     }
 }
 
+/**
+ * Metodo para hacer el numero de prestamos
+ */
 public void prestar()
 {
     prestamos = prestamos + 1;
 }
 
+/**
+ * Metodo para regresar el numero de prestamos
+ */
 public int dimePrestamos()
 {
     return prestamos;
